@@ -1,12 +1,33 @@
 package pkg;
 
+/**
+ * Parent class defining a general person. It can be a simple user or an IT staff member.
+ */
 public class PersonBean {
 
+    /**
+     * Username of the general user.
+     */
     private String username;
+    /**
+     * Password of the general user.
+     */
     private String password;
+    /**
+     * User's first name. They can have multiple.
+     */
     private String firstName;
+    /**
+     * User's last name.
+     */
     private String lastName;
+    /**
+     * User's e-mail address.
+     */
     private String email;
+    /**
+     * User's contact number.
+     */
     private String contactNumber;
     
 
