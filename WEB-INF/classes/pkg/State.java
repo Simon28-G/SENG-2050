@@ -1,6 +1,9 @@
 package pkg;
 
-public enum StateEnum {
+/**
+ * Enumeration class used for the state of the issue.
+ */
+public enum State {
     NEW,
     IN_PROGRESS,
     WAITING_THIRD_PARTY,
