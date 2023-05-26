@@ -11,6 +11,10 @@ public class UserBean extends PersonBean{
      * Unique ID number identifying the user.
      */
     private int userId;
+    /**
+     * List of issues the user has reported.
+     */
+    private ArrayList<IssueBean> listIssues;
 
 
     public UserBean() {
@@ -60,6 +64,14 @@ public class UserBean extends PersonBean{
 
     public void setUserId(int id) {
         this.userId = id;
+    }
+
+    public ArrayList<IssueBean> getListIssues() {
+        return listIssues;
+    }
+
+    public void setListIssues(ArrayList<IssueBean> listIssues) {
+        this.listIssues = listIssues;
     }
 
 }
