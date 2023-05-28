@@ -1,4 +1,4 @@
-package pkg;
+package app;
 
 /**
  * Parent class defining a general person. It can be a simple user or an IT staff member.

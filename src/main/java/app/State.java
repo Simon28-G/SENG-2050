@@ -1,4 +1,4 @@
-package pkg;
+package app;
 
 /**
  * Enumeration class used for the state of the issue.

@@ -1,4 +1,4 @@
-package pkg;
+package app;
 
 /**
  * Class describing an IT Manager.

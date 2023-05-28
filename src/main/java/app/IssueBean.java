@@ -1,8 +1,6 @@
-package pkg;
+package app;
 
 import java.util.Date;
-import pkg.Category;
-import pkg.State;
 
 /**
  * Bean representing an Issue, with all of its characteristics
