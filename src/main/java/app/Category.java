@@ -1,4 +1,4 @@
-package pkg;
+package app;
 
 /**
  * Enumeration class used for the category associated with the issue.
