@@ -10,9 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/formstyle.css">
 </head>
 <body>
-    <form action="auth/AuthAction" name="loginForm" method="POST">
+    <form action="auth/AuthAction.java" name="loginForm" method="POST">
         <h3>Login</h3>
         <label for="username">Username: </label>
         <input id="username" type="text" name="username" placeholder=" Enter Username">
