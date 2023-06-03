@@ -4,7 +4,7 @@ GO
 USE c3424883_db;
 
 -- For Dev purposes (not in a production environment)
-CREATE LOGIN adminSENG2050 WITH PASSWORD='admin';
+CREATE LOGIN adminSENG2050 WITH PASSWORD='adminSENG2050';
 
 CREATE USER adminSENG2050 FOR LOGIN adminSENG2050;
 
