@@ -5,7 +5,7 @@ package app;
  */
 public enum Category {
     NETWORK,
-    SOFTWARE1,
+    SOFTWARE,
     HARDWARE,
     EMAIL,
     ACCOUNT

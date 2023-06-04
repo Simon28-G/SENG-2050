@@ -73,19 +73,19 @@ INSERT INTO Categories VALUES ('Email');
 INSERT INTO Categories VALUES ('Account');
 
 INSERT INTO Users (userName, password, firstName, surname, email, phoneNum, isStaff, isManager)
-VALUES ('johnDoe', 'CBFDAC6008F9CAB4083784CBD1874F76618D2A97', 'John', 'Doe', 'john.doe@example.com', '1234567890', 0, 1);
+VALUES ('johnDoe', '238f32a8338b7e68b7adf60f7fa34785f9b208dd', 'John', 'Doe', 'john.doe@example.com', '1234567890', 0, 1);
 
 INSERT INTO Users (userName, password, firstName, surname, email, phoneNum, isStaff, isManager)
-VALUES ('janeSmith', 'CBFDAC6008F9CAB4083784CBD1874F76618D2A97', 'Jane', 'Smith', 'jane.smith@example.com', '9876543210', 1, 0);
+VALUES ('janeSmith', '238f32a8338b7e68b7adf60f7fa34785f9b208dd', 'Jane', 'Smith', 'jane.smith@example.com', '9876543210', 1, 0);
 
 INSERT INTO Users (userName, password, firstName, surname, email, phoneNum, isStaff, isManager)
-VALUES ('aliceJohnson', 'CBFDAC6008F9CAB4083784CBD1874F76618D2A97', 'Alice', 'Johnson', 'alice.johnson@example.com', '5551234567', 0, 0);
+VALUES ('aliceJohnson', '238f32a8338b7e68b7adf60f7fa34785f9b208dd', 'Alice', 'Johnson', 'alice.johnson@example.com', '5551234567', 0, 0);
 
 INSERT INTO Users (userName, password, firstName, surname, email, phoneNum, isStaff, isManager)
-VALUES ('bobWilliams', 'CBFDAC6008F9CAB4083784CBD1874F76618D2A97', 'Bob', 'Williams', 'bob.williams@example.com', '9876543210', 1, 1);
+VALUES ('bobWilliams', '238f32a8338b7e68b7adf60f7fa34785f9b208dd', 'Bob', 'Williams', 'bob.williams@example.com', '9876543210', 1, 1);
 
 INSERT INTO Users (userName, password, firstName, surname, email, phoneNum, isStaff, isManager)
-VALUES ('sarahBrown', 'CBFDAC6008F9CAB4083784CBD1874F76618D2A97', 'Sarah', 'Brown', 'sarah.brown@example.com', '1234567890', 1, 0);
+VALUES ('sarahBrown', '238f32a8338b7e68b7adf60f7fa34785f9b208dd', 'Sarah', 'Brown', 'sarah.brown@example.com', '1234567890', 1, 0);
 
 
 -- Inserting data into the "Issues" table
