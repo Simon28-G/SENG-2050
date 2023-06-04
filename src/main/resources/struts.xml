@@ -2,5 +2,30 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts
 Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
+    <package name="default" extends="struts-default">
+        <interceptors>
+            <interceptor name="authenticationInterceptor" class="auth.AuthenticationInterceptor" />
+            <interceptor-stack name="authStack">
+                <interceptor-ref name="authenticationInterceptor" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="authStack" />
 
+        <default-action-ref name="welcome" />
+        <action name="welcome" class="actions.WelcomeAction" method="execute">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/WEB-INF/jsp/index-success.jsp</result>
+            <result name="error">/WEB-INF/jsp/login.jsp</result>
+        </action>
+
+        <action name="login" class="auth.AuthAction">
+            <interceptor-ref name="defaultStack" />
+            <param name="credentialHolder.username">${credentialHolder.username}</param>
+            <param name="credentialHolder.password">${credentialHolder.password}</param>
+            <result name="success">welcome.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+
+    </package>
 </struts>
