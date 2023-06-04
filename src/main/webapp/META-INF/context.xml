@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
     <Resource name="jdbc/appDB"  type="javax.sql.DataSource"
-              username="adminSENG2050 " password="adminSENG2050"
+              username="admin2050" password="admin2050"
               driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-              url="jdbc:sqlserver://localhost\SENG2050;c3424833_db"/>
+              url="jdbc:sqlserver://localhost:1433;databaseName=c3424883_db"/>
 </Context>

@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    compileOnly 'com.microsoft.sqlserver:mssql-jdbc:12.2.0.jre8'
+
     implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
     implementation group: 'org.apache.struts', name: 'struts2-core', version: '6.1.2'
 
