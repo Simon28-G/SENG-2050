@@ -16,7 +16,7 @@ Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
         <action name="welcome" class="actions.WelcomeAction" method="execute">
             <interceptor-ref name="defaultStack" />
             <result name="success">/WEB-INF/jsp/index-success.jsp</result>
-            <result name="error">/WEB-INF/jsp/issueForm.jsp</result>
+            <result name="error">/WEB-INF/jsp/login.jsp</result>
         </action>
 
         <action name="login" class="auth.AuthAction" method="execute">
