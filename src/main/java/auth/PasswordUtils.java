@@ -9,6 +9,7 @@ public class PasswordUtils {
         try {
             // Calculate the SHA-1 hash of the user's input
             MessageDigest messageDigest = MessageDigest.getInstance(HASH_ALGORITHM);
+            messageDigest.reset();
             byte[] inputHash = messageDigest.digest(userInput.getBytes());
 
             // Convert the byte array to a hexadecimal string
@@ -16,7 +17,6 @@ public class PasswordUtils {
             for (byte b : inputHash) {
                 inputHashHex.append(String.format("%02x", b));
             }
-
             // Compare the calculated hash with the stored hash
             return inputHashHex.toString().equals(storedHash);
         } catch (NoSuchAlgorithmException e) {

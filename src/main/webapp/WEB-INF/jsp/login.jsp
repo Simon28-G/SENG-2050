@@ -11,15 +11,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../css/loginFormStyle.css">
+<%--    <link rel="stylesheet" type="text/css" href="../css/loginFormStyle.css">--%>
 </head>
 <body>
-    <s:form action="login" method="POST">
+    <s:form action="login" method="post">
         <h3>Login</h3>
-        <s:textfield id="username" name="username" placeholder="Enter Username" label="Username"/>
-        <s:password id="password" name="password" placeholder="Enter Password" label="Password" />
+        <s:textfield name="credentialHolder.username" placeholder="Enter Username" label="Username"/>
+        <s:password  name="credentialHolder.password" placeholder="Enter Password" label="Password" />
         <br/>
-        <s:submit name="login" value="Login" />
+        <s:submit value="login" />
     </s:form>
 
 </body>

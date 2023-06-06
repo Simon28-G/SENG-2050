@@ -1,8 +1,11 @@
 package auth;
 
 public class CredentialHolder {
-    private final String username;
-    private final String password;
+    private  String username;
+    private  String password;
+
+    public CredentialHolder() {
+    }
 
     public CredentialHolder(String username, String password) {
         this.username = username;
@@ -15,5 +18,13 @@ public class CredentialHolder {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
