@@ -22,21 +22,11 @@
 <h1>New Issue</h1>
 
 <s:form action="submitIssue" name="issueForm" method="POST">
-    <label for="title">Issue Title:</label>
-    <input id="title" name="title" /><br/>
-    <label for="desc">Issue Description:</label>
-    <input id="desc" type="text" name="description"/>
-    <label for="category">Category:</label>
-    <select id="category" name="category" list="dropDownValues">
-        <option>NETWORK</option>
-        <option>SOFTWARE</option>
-        <option>HARDWARE</option>
-        <option>EMAIL</option>
-        <option>ACCOUNT</option>
-    </select>
-    <label for="file">File:</label>
-    <input id="file" name="file" type="file" label="File"/>
-    <input type="submit"/>
+    <s:textfield id="title" name="issue.title" label="Issue Title" placeholder="Title" /><br/>
+    <s:textfield id="description" name="issue.description" placeholder="Description" label="Issue Description"/>
+    <!-- <select id="category" name="category" list="dropDownValues" value="selectedCategory"/> -->
+    <s:file id="file" name="issue.file" label="File" />
+    <s:submit value="Submit" />
 </s:form>
 
 </body>

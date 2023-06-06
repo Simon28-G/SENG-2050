@@ -1,5 +1,6 @@
 package app;
 
+import java.io.File;
 import java.util.Date;
 
 /**
@@ -51,6 +52,7 @@ public class IssueBean {
      * SOFTWARE, HARDWARE, EMAIL or ACCOUNT.
      */
     private Category category;
+    private File file;
 
 
     
@@ -172,11 +174,19 @@ public class IssueBean {
     
     // Getter and setter for 'category'
     public Category getCategory() {
-        return category;
+        return this.category;
     }
     
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public File getFile() {
+        return this.file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
     }
 
 }

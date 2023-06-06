@@ -8,6 +8,7 @@ import app.State;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+import java.io.File;
 import java.util.Date;
 import java.util.Map;
 
@@ -19,6 +20,8 @@ public class SubmitIssue extends ActionSupport {
     private State status;
     private Category category;
     private Map<String, Object> session;
+    private File file;
+    private String fileName;
 
     //SETTERS AND GETTERS
     public Map<String, Object> getSession(){
@@ -70,6 +73,11 @@ public class SubmitIssue extends ActionSupport {
             issue.setDateReported(date);
             issue.setState(State.NEW);
             issue.setCategory(getCategory());
+
+            if (file != null){
+                this.file = file;
+            }
+
             return SUCCESS;
         } catch (Exception e){
             e.printStackTrace();
