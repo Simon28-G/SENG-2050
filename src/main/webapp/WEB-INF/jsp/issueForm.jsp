@@ -21,10 +21,15 @@
 </div>
 <h1>New Issue</h1>
 
-<s:form action="submitIssue" name="issueForm" method="POST">
+<!--
+ name="issueForm" method="POST"
+ id="category"
+-->
+
+<s:form action="submitIssue">
     <s:textfield id="title" name="issue.title" label="Issue Title" placeholder="Title" /><br/>
-    <s:textfield id="description" name="issue.description" placeholder="Description" label="Issue Description"/>
-    <!-- <select id="category" name="category" list="dropDownValues" value="selectedCategory"/> -->
+    <s:textarea id="description" name="issue.description" placeholder="Description" label="Issue Description"/>
+    <s:select label="Category" headerKey="-1" headerValue="-- Select a category -- " list="{'NETWORK', 'SOFTWARE', 'HARDWARE', 'EMAIL', 'ACCOUNT'}" name="category" value="defaultCategory"/>
     <s:file id="file" name="issue.file" label="File" />
     <s:submit value="Submit" />
 </s:form>

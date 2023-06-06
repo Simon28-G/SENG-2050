@@ -8,17 +8,9 @@ import java.util.ArrayList;
 
 public class DropMenu extends ActionSupport {
     private String selectedCategory;
-    private List<String> dropDownValues;
+    private List<String> categoryList;
 
     public String execute() {
-        // Populate the dropDownValues list with the desired values
-        dropDownValues = new ArrayList<>();
-        dropDownValues.add("NETWORK");
-        dropDownValues.add("SOFTWARE");
-        dropDownValues.add("HARDWARE");
-        dropDownValues.add("EMAIL");
-        dropDownValues.add("ACCOUNT");
-
         return SUCCESS;
     }
 
@@ -31,11 +23,26 @@ public class DropMenu extends ActionSupport {
         this.selectedCategory = selectedCategory;
     }
 
-    public List<String> getDropDownValues() {
-        return this.dropDownValues;
+    public List<String> getCategoryList() {
+        return this.categoryList;
     }
 
-    public void setDropDownValues(ArrayList<String> dropDownValues) {
-        this.dropDownValues = dropDownValues;
+    public void setCategoryList(ArrayList<String> categoryList) {
+        this.categoryList = categoryList;
+    }
+
+    public String getDefaultCategory() {
+        return "NETWORK";
+    }
+
+    public String initializeCategoryList(){
+        // Populate the categoryList list with the desired values
+        categoryList = new ArrayList<>();
+        categoryList.add("NETWORK");
+        categoryList.add("SOFTWARE");
+        categoryList.add("HARDWARE");
+        categoryList.add("EMAIL");
+        categoryList.add("ACCOUNT");
+        return NONE;
     }
 }
