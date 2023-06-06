@@ -1,45 +1,50 @@
 <%--
   Created by IntelliJ IDEA.
   User: lgala
-  Date: 2/06/2023
-  Time: 10:19 pm
+  Date: 4/06/2023
+  Time: 12:53 am
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Issue Forum</title>
+  <meta charset="UTF-8">
+  <title>Incident Report System</title>
+  <link rel="stylesheet" href="../css/issuesPagesStyle.css">
+  <script src="../js/issueForumSort.js"></script>
 </head>
 <body>
-<div>
-  <button class="dropbtn">Menu</button>
-  <div>
-    <a href="#">Issues</a>
-    <a href="#">Knowledge Base</a>
-    <a href="#">Assigned Issues</a>
-    <a href="#">Log Out</a>
-  </div>
+<h1>Welcome to the Incident Report System</h1>
+
+<div class="navbar">
+  <a href="issueForumStaff.jsp">Issues</a>
+  <a href="#">Knowledge Base</a>
+  <a href="#">Log out</a>
 </div>
-<table>
+
+<h2>Issue List</h2>
+<table id="issueTable">
   <tr>
-    <th><button onclick="sortByTitle">Title</button></th>
-    <th><button onclick="sortByStatus">Status</button></th>
-    <th><button onclick="sortByDate">Reported Date</button></th>
-    <th><button onclick="sortByCategory">Category</button></th>
-    <th><button onclick="sortByStaff">Assigned Staff</button></th>
+    <th onclick="sortTable(0)">Title</th>
+    <th onclick="sortTable(1)">Status</th>
+    <th onclick="sortTable(2)">Reporting Date</th>
+    <th onclick="sortTable(3)">Category</th>
+    <th onclick="sortTable(4)">Assigned Staff</th>
   </tr>
   <s:iterator value="issueList"> <%-- 'issueList' WILL BE THE ARRAY THAT STORES THE ISSUES --%>
     <tr>
-      <td><s:property value="issueId"/></td>
       <td><s:property value="title"/></td>
       <td><s:property value="status"/></td>
       <td><s:property value="dateReported"/></td>
-      <td><s:property value="Category"/></td>
-      <td><s:property value="staffId"/></td> <%-- Need to find a way to make this an 'Assign Myself' button --%>
+      <td><s:property value="category"/></td>
+      <td><s:property value="staffId"/></td>
     </tr>
   </s:iterator>
+  <!-- Add more rows with issue data from the database -->
 </table>
 </body>
 </html>
