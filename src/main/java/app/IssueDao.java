@@ -25,7 +25,7 @@ public class IssueDao {
             e.printStackTrace();
         }
     }
-    public IssueBean getIssueByID(int issueID) throws SQLException {
+    public  IssueBean getIssueByID(int issueID) throws SQLException {
         String query = "SELECT * FROM Issues WHERE issueID = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, issueID);
@@ -172,7 +172,6 @@ public class IssueDao {
 
         return files;
     }
-
 
 
 }
