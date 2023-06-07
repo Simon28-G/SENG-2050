@@ -14,11 +14,9 @@
     <link rel="stylesheet" href="../css/issueFormStyle.css">
 </head>
 <body>
-<div class="navbar">
-    <a href="#">Issues</a>
-    <a href="#">Knowledge Base</a>
-    <a href="#">Log out</a>
-</div>
+
+<s:a action="issueForumUser">Back</s:a>
+
 <h1>New Issue</h1>
 
 <s:form action="submitIssue" enctype="multipart/form-data">
