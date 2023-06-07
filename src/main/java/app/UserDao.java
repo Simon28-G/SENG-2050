@@ -43,7 +43,7 @@ public class UserDao {
         return user;
     }
 
-    public boolean validatePassword(UserBean user, String inputPassword) {
+    public boolean validatePassword(PersonBean user, String inputPassword) {
         return user != null && PasswordUtils.isPasswordMatch(inputPassword, user.getPassword());
     }
 
