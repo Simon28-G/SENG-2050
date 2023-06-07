@@ -9,10 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDao {
+public class PersonDao {
    private Connection connection;
 
-    public UserDao() {
+    public PersonDao() {
         try {
             InitialContext ctx = new InitialContext();
             DataSource dataSource = (DataSource) ctx.lookup("java:/comp/env/jdbc/appDB");
@@ -69,11 +69,4 @@ public class UserDao {
         return user != null && PasswordUtils.isPasswordMatch(inputPassword, user.getPassword());
     }
 
-    public void logout(){
-        try {
-            connection.close();
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
-    }
 }

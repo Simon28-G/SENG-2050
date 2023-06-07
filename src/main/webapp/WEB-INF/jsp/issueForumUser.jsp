@@ -49,21 +49,21 @@
 <table id="issueTable">
     <tr>
         <th onclick="sortTable(0)">Title</th>
-        <th onclick="sortTable(1)">Status</th>
+        <th onclick="sortTable(1)">State</th>
         <th onclick="sortTable(2)">Reporting Date</th>
         <th onclick="sortTable(3)">Category</th>
         <th onclick="sortTable(4)">Assigned Staff</th>
     </tr>
-    <s:iterator value="issueList"> <%-- 'issueList' WILL BE THE ARRAY THAT STORES THE ISSUES --%>
+
+    <s:iterator value="issuesList">
         <tr>
             <td><s:property value="title"/></td>
-            <td><s:property value="status"/></td>
+            <td><s:property value="state"/></td>
             <td><s:property value="dateReported"/></td>
             <td><s:property value="category"/></td>
             <td><s:property value="staffId"/></td>
         </tr>
     </s:iterator>
-    <!-- Add more rows with issue data from the database -->
 </table>
 <footer>
     <p><em>Logged in as:
