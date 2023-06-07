@@ -16,7 +16,9 @@
 </head>
 <body>
 
-<s:a action="issueForumUser">Back</s:a>
+<s:form action="issueForumUser" style="margin-left: auto;">
+    <s:submit value="Back" class="newButton"/>
+</s:form>
 
 <h1>New Issue</h1>
 

@@ -24,7 +24,7 @@
     <meta charset="UTF-8">
     <title>Incident Report System</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/issuesPagesStyle.css">
-    <script src="../js/issueForumSort.js"></script>
+    <script src="${pageContext.request.contextPath}/js/issueForumSort.js"></script>
 </head>
 <body>
 <h1>Welcome to the Incident Report System</h1>
