@@ -44,7 +44,9 @@
     <div class="s-property-value"><s:property value="issue.category"/></div>
 <p>ID of the staff member assigned:</p>
     <div class="s-property-value"><s:property value="issue.staffId"/></div>
-
+<c:if test="${issue.file != null}">
+<a href="downloadFile">Download File</a>
+</c:if>
 
 <table>
     <tr>
