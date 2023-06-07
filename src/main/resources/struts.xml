@@ -15,51 +15,51 @@ Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
         <default-action-ref name="welcome" />
         <action name="welcome" class="actions.WelcomeAction" method="execute">
             <interceptor-ref name="defaultStack" />
-            <result name="success">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="success">/WEB-INF/jsp/issueForum.jsp</result>
             <result name="error">/WEB-INF/jsp/login.jsp</result>
         </action>
 
         <action name="login" class="auth.AuthAction" method="execute">
             <interceptor-ref name="defaultStack" />
-            <result name="success-user">/WEB-INF/jsp/issueForumUser.jsp</result>
-            <result name="success-staff">/WEB-INF/jsp/issueForumUser.jsp</result>
-            <result name="success-manager">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="success-user">/WEB-INF/jsp/issueForum.jsp</result>
+            <result name="success-staff">/WEB-INF/jsp/issueForum.jsp</result>
+            <result name="success-manager">/WEB-INF/jsp/issueForum.jsp</result>
             <result name="error">/WEB-INF/jsp/login.jsp</result>
         </action>
 
         <action name="submitIssue" class="actions.SubmitIssue">
             <interceptor-ref name="defaultStack" />
-            <result name="success">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="success">/WEB-INF/jsp/issueForum.jsp</result>
             <result name="error">/WEB-INF/jsp/issueForm.jsp</result>
         </action>
 
         <action name="setResolverPerson" class="actions.SetResolverPerson">
             <interceptor-ref name="defaultStack" />
             <result name="success">/WEB-INF/jsp/setResolverPersonForm.jsp</result>
-            <result name="error">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="error">/WEB-INF/jsp/issueForum.jsp</result>
         </action>
 
         <action name="submitResolverPerson" class="actions.SubmitResolverPerson">
             <interceptor-ref name="defaultStack" />
-            <result name="success">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="success">/WEB-INF/jsp/issueForum.jsp</result>
             <result name="error">/WEB-INF/jsp/setResolverPersonForm.jsp</result>
         </action>
 
         <action name="searchAction" class="actions.SearchAction">
             <interceptor-ref name="defaultStack" />
-            <result name="success">/WEB-INF/jsp/issueForumUser.jsp</result>
-            <result name="error">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="success">/WEB-INF/jsp/issueForum.jsp</result>
+            <result name="error">/WEB-INF/jsp/issueForum.jsp</result>
         </action>
 
         <action name="displayIssueForm" class="actions.DisplayIssueForm">
             <interceptor-ref name="defaultStack" />
             <result name="success">/WEB-INF/jsp/issueForm.jsp</result>
-            <result name="error">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="error">/WEB-INF/jsp/issueForum.jsp</result>
         </action>
 
-        <action name="issueForumUser" class="actions.DisplayIssueForum">
+        <action name="issueForum" class="actions.DisplayIssueForum">
             <interceptor-ref name="defaultStack" />
-            <result name="success">/WEB-INF/jsp/issueForumUser.jsp</result>
+            <result name="success">/WEB-INF/jsp/issueForum.jsp</result>
         </action>
 
         <action name="knowledgeBase" class="actions.DisplayKnowledgeBase">

@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<s:a action="issueForumUser">Back</s:a>
+<s:a action="issueForum">Back</s:a>
 
 <h1>Assign a resolver to the issue</h1>
 

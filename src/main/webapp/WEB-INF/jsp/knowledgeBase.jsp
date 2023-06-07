@@ -31,7 +31,7 @@
 <h3>Here you can find all the resolved issues that can help you into finding a solution to your problem.</h3>
 
 <div class="navbar">
-  <s:a action="issueForumUser">Issues</s:a>
+  <s:a action="issueForum">Issues</s:a>
   <s:a class="active" action="knowledgeBase">Knowledge Base</s:a>
   <s:a action="logout">Log out</s:a>
 </div>

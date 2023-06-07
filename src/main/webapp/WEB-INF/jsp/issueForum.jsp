@@ -30,7 +30,7 @@
 <h1>Welcome to the Incident Report System</h1>
 
 <div class="navbar">
-    <s:a class="active" action="issueForumUser">Issues</s:a>
+    <s:a class="active" action="issueForum">Issues</s:a>
     <s:a action="knowledgeBase">Knowledge Base</s:a>
     <s:a action="logout">Log out</s:a>
 </div>
@@ -79,20 +79,6 @@
             <%}%></td>
         </tr>
     </s:iterator>
-        <s:iterator value="issuesList" var="issue">
-            <tr>
-                <td><s:property value="title"/></td>
-                <td><s:property value="state"/></td>
-                <td><s:property value="dateReported"/></td>
-                <td><s:property value="category"/></td>
-                <td><s:property value="staffId"/></td>
-                <s:form action="setResolverPerson" style="margin-left: auto;">
-                    <s:hidden name="issueID" value="%{#issue.issueID}" />
-                    <s:submit value="Assign a resolver" />
-                </s:form>
-
-            </tr>
-        </s:iterator>
 </table>
 <footer>
     <p><em>Logged in as:

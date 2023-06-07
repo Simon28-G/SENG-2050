@@ -127,3 +127,11 @@ p {
     font-weight: bold;
     color: #555;
 }
+
+.issue{
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}

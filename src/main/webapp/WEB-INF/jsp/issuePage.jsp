@@ -27,7 +27,7 @@
 </head>
 <body>
 
-<s:form action="issueForumUser" style="margin-left: auto;">
+<s:form action="issueForum" style="margin-left: auto;">
     <s:submit value="Back" class="newButton"/>
 </s:form>
 
