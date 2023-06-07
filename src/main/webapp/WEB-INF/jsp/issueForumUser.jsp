@@ -30,20 +30,19 @@
 <h1>Welcome to the Incident Report System</h1>
 
 <div class="navbar">
-    <s:a action="issueForumUser">Issues</s:a>
+    <s:a class="active" action="issueForumUser">Issues</s:a>
     <s:a action="knowledgeBase">Knowledge Base</s:a>
     <s:a action="logout">Log out</s:a>
 </div>
 
-
-<div style="display: flex;">
-    <s:form action="searchAction" style="display: flex;">
-        <s:textfield name="searchQuery" placeholder="Search..." />
-        <s:submit value="Search" />
+<div class="search-container">
+    <s:form action="searchAction" class="search container">
+        <s:textfield name="searchQuery" placeholder="Search..." style="margin-right: 10px;" class="input"/>
+        <s:submit value="Search" class="button"/>
     </s:form>
 
     <s:form action="displayIssueForm" style="margin-left: auto;">
-        <s:submit value="New Issue" />
+        <s:submit value="New Issue" class="newButton"/>
     </s:form>
 </div>
 
