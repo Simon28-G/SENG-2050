@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-<%--    <link rel="stylesheet" type="text/css" href="../css/loginFormStyle.css">--%>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/loginFormStyle.css">
 </head>
 <body>
     <s:form action="login" method="post">

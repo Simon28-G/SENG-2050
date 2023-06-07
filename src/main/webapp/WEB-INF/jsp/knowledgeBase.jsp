@@ -13,7 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Incident Report System</title>
-  <link rel="stylesheet" href="../css/issuesPagesStyle.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/issuesPagesStyle.css">
   <script src="../js/issueForumSort.js"></script>
 </head>
 <body>

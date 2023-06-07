@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
     <title>Issue Form</title>
-    <link rel="stylesheet" type="text/css" href="../css/issueFormStyle.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/issueFormStyle.css">
 </head>
 <body>
 

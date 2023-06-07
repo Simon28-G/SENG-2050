@@ -23,7 +23,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Incident Report System</title>
-    <link rel="stylesheet" href="../css/issuesPagesStyle.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/issuesPagesStyle.css">
     <script src="../js/issueForumSort.js"></script>
 </head>
 <body>
@@ -45,7 +45,7 @@
     <s:submit value="New Issue" />
 </s:form>
 
-<h2>Issue List</h2>
+<h2>List of the issues</h2>
 <table id="issueTable">
     <tr>
         <th onclick="sortTable(0)">Title</th>
