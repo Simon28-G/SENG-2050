@@ -57,6 +57,15 @@ CREATE TABLE Comments(
                         FOREIGN KEY(userId) REFERENCES Users(userID)
 );
 
+CREATE TABLE Files (
+                       fileID int IDENTITY PRIMARY KEY,
+                       name varchar(255) NOT NULL,
+                       hashedName varchar(255) NOT NULL,
+                       issueID int NOT NULL,
+
+                       FOREIGN KEY(issueID) REFERENCES Issues(issueID) ON UPDATE CASCADE ON DELETE NO ACTION,
+);
+
 
 CREATE TABLE Keywords(
                         keywordID int IDENTITY PRIMARY KEY,
@@ -90,19 +99,19 @@ VALUES ('sarahBrown', '238f32a8338b7e68b7adf60f7fa34785f9b208dd', 'Sarah', 'Brow
 
 -- Inserting data into the "Issues" table
 INSERT INTO Issues (reporterID, ITStaffID, title, description, resolutionDetails, reportedDate, resolvedDate, state, category, isKBArticle)
-VALUES (1, 2, 'Network Connectivity Issues', 'Experiencing intermittent network connectivity', 'Resolved by restarting the router', '2023-05-01', '2023-05-02', 'Resolved', 'Network', 1);
+VALUES (1, 2, 'Network Connectivity Issues', 'Experiencing intermittent network connectivity', 'RESOLVED by restarting the router', '2023-05-01', '2023-05-02', 'RESOLVED', 'NETWORK', 1);
 
 INSERT INTO Issues (reporterID, ITStaffID, title, description, reportedDate, state, category, isKBArticle)
-VALUES (2, 3, 'Software Installation Error', 'Encountering error during software installation', '2023-05-03', 'Open', 'Software', 0);
+VALUES (2, 3, 'Software Installation Error', 'Encountering error during software installation', '2023-05-03', 'NEW', 'SOFTWARE', 0);
 
 INSERT INTO Issues (reporterID, ITStaffID, title, description, reportedDate, state, category, isKBArticle)
-VALUES (3, 1, 'Printer Not Responding', 'Printer is not responding to print requests', '2023-05-04', 'Open', 'Hardware', 0);
+VALUES (3, 1, 'Printer Not Responding', 'Printer is not responding to print requests', '2023-05-04', 'NEW', 'HARDWARE', 0);
 
 INSERT INTO Issues (reporterID, ITStaffID, title, description, resolutionDetails, reportedDate, resolvedDate, state, category, isKBArticle)
-VALUES (2, 3, 'Email Access Issues', 'Unable to access email account', 'Resolved by resetting the password', '2023-05-05', '2023-05-06', 'Resolved', 'Email', 1);
+VALUES (2, 3, 'Email Access Issues', 'Unable to access email account', 'RESOLVED by resetting the password', '2023-05-05', '2023-05-06', 'RESOLVED', 'EMAIL', 1);
 
 INSERT INTO Issues (reporterID, ITStaffID, title, description, reportedDate, state, category, isKBArticle)
-VALUES (1, 2, 'Website Performance Degradation', 'Experiencing slow website performance', '2023-05-07', 'Open', 'Network', 0);
+VALUES (1, 2, 'Website Performance Degradation', 'Experiencing slow website performance', '2023-05-07', 'NEW', 'NETWORK', 0);
 
 
 -- Inserting data into the "Comments" table

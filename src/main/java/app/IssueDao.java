@@ -1,6 +1,9 @@
 package app;
+import org.apache.struts2.ServletActionContext;
+
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -113,6 +116,47 @@ public class IssueDao {
         issue.setKBArticle(resultSet.getBoolean("isKBArticle"));
         return issue;
     }
+
+    public void saveFileDetails(String originalFileName, String hashedName, int issueId) {
+        // Implement the logic to save file details to the database
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO Files (name, hashedName, issueId) VALUES (?, ?, ?)");
+            statement.setString(1, originalFileName);
+            statement.setString(2, hashedName);
+            statement.setInt(3, issueId);
+            statement.executeUpdate();
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<File> getFilesByIssueId(int issueId) {
+        List<File> files = new ArrayList<>();
+
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT * FROM Files WHERE `issueId` = ?");
+            statement.setInt(1, issueId);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                String path = ServletActionContext.getServletContext().getRealPath("/") + "/uploads/" + resultSet.getString("hashedName");
+                File file = new File(path);
+                files.add(file);
+            }
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return files;
+    }
+
 
 
 }
