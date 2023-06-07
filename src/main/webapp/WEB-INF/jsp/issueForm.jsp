@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Issue Form</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/issueFormStyle.css">
 </head>

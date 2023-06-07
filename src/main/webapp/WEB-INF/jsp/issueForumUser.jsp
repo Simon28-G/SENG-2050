@@ -57,13 +57,26 @@
         <th onclick="sortTable(4)">Assigned Staff</th>
     </tr>
 
-    <s:iterator value="issuesList">
+    <s:iterator value="issuesList" var="issue">
         <tr>
-            <td><s:property value="title"/></td>
+            <td>
+                <s:form action="displayIssuePage" style="margin-left: auto;">
+                    <s:hidden name="issueID" value="%{#issue.issueID}" />
+                    <s:submit value="%{#issue.title}" />
+                </s:form>
+            </td>
             <td><s:property value="state"/></td>
             <td><s:property value="dateReported"/></td>
             <td><s:property value="category"/></td>
-            <td><s:property value="staffId"/></td>
+            <td><s:property value="staffId"/>
+            <%
+                if (person instanceof ManagerBean){
+            %>
+            <s:form action="setResolverPerson" style="margin-left: auto;">
+                <s:hidden name="issue" value="%{#issue}" />
+                <s:submit value="Assign a resolver" />
+            </s:form>
+            <%}%></td>
         </tr>
     </s:iterator>
 </table>

@@ -111,3 +111,19 @@ tr:nth-child(odd) {
     border: none;
     cursor: pointer;
 }
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.s-property-value {
+    font-weight: bold;
+    color: #555;
+}
