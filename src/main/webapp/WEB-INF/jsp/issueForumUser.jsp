@@ -36,14 +36,17 @@
 </div>
 
 
-<s:form action="searchAction">
-    <s:textfield name="searchQuery" placeholder="Search..." />
-    <s:submit value="Search" />
-</s:form>
+<div style="display: flex;">
+    <s:form action="searchAction" style="display: flex;">
+        <s:textfield name="searchQuery" placeholder="Search..." />
+        <s:submit value="Search" />
+    </s:form>
 
-<s:form action="displayIssueForm">
-    <s:submit value="New Issue" />
-</s:form>
+    <s:form action="displayIssueForm" style="margin-left: auto;">
+        <s:submit value="New Issue" />
+    </s:form>
+</div>
+
 
 <h2>List of the issues</h2>
 <table id="issueTable">
