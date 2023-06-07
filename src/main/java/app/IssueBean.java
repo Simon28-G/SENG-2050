@@ -12,15 +12,15 @@ public class IssueBean {
     /**
      * Unique ID number for the issue.
      */
-    private int issueId;
+    private int issueID;
     /**
      * Unique ID number for the reporter of the issue.
      */
-    private int reporterId;
+    private int reporterID;
     /**
      * Unique ID number for the staff member assigned to the issue.
      */
-    private int staffId;
+    private int staffID;
     /**
      * Title of the issue.
      */
@@ -54,6 +54,8 @@ public class IssueBean {
     private Category category;
     private File file;
 
+    private boolean isKBArticle;
+
 
     
     /**
@@ -61,15 +63,16 @@ public class IssueBean {
      * @param title : the title of the issue
      * @param description : the description of the issue
      * @param category : the category of the issue
-     * @param reporterId : the ID number of the reporter
+     * @param reporterID : the ID number of the reporter
+     * @param isKBArticle : a boolean value if it is a KB article
      */
     public void create(String title, String description, Category category,
-            int reporterId) {
+            int reporterID) {
 
     }
     
 
-    public void addComment(int commentId) {
+    public void addComment(int commentID) {
 
     }
     
@@ -91,31 +94,31 @@ public class IssueBean {
 
 
 
-    // Getter and setter for 'issueId'
-    public int getIssueId() {
-        return issueId;
+    // Getter and setter for 'issueID'
+    public int getIssueID() {
+        return issueID;
     }
     
-    public void setIssueId(int issueId) {
-        this.issueId = issueId;
+    public void setIssueID(int issueID) {
+        this.issueID = issueID;
     }
     
-    // Getter and setter for 'reporterId'
-    public int getReporterId() {
-        return reporterId;
+    // Getter and setter for 'reporterID'
+    public int getReporterID() {
+        return reporterID;
     }
     
-    public void setReporterId(int reporterId) {
-        this.reporterId = reporterId;
+    public void setReporterID(int reporterID) {
+        this.reporterID = reporterID;
     }
     
-    // Getter and setter for 'staffId'
-    public int getStaffId() {
-        return staffId;
+    // Getter and setter for 'staffID'
+    public int getStaffID() {
+        return staffID;
     }
     
-    public void setStaffId(int staffId) {
-        this.staffId = staffId;
+    public void setStaffID(int staffID) {
+        this.staffID = staffID;
     }
     
     // Getter and setter for 'title'
@@ -189,4 +192,11 @@ public class IssueBean {
         this.file = file;
     }
 
+    public boolean isKBArticle() {
+        return isKBArticle;
+    }
+
+    public void setKBArticle(boolean KBArticle) {
+        isKBArticle = KBArticle;
+    }
 }

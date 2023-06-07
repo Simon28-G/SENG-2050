@@ -29,7 +29,7 @@
 <s:form action="submitIssue">
     <s:textfield id="title" name="issue.title" label="Issue Title" placeholder="Title" /><br/>
     <s:textarea id="description" name="issue.description" placeholder="Description" label="Issue Description"/>
-    <s:select label="Category" headerKey="-1" headerValue="-- Select a category -- " list="{'NETWORK', 'SOFTWARE', 'HARDWARE', 'EMAIL', 'ACCOUNT'}" name="category" value="defaultCategory"/>
+    <s:select label="Category" headerKey="-1" headerValue="-- Select a category -- " list="{'NETWORK', 'SOFTWARE', 'HARDWARE', 'EMAIL', 'ACCOUNT'}" name="issue.category" value="defaultCategory"/>
     <s:file id="file" name="issue.file" label="File" />
     <s:submit value="Submit" />
 </s:form>

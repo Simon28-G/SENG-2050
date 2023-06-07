@@ -29,7 +29,7 @@ CREATE TABLE Categories(
 CREATE TABLE Issues(
                       issueID int IDENTITY PRIMARY KEY,
                       reporterID int NOT NULL,
-                      ITStaffID int NOT NULL,
+                      ITStaffID int,
                       title nvarchar(55) NOT NULL,
                       description nvarchar(300) NOT NULL,
                       resolutionDetails nvarchar(300),
