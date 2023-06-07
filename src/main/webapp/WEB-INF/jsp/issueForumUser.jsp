@@ -46,5 +46,8 @@
     </s:iterator>
     <!-- Add more rows with issue data from the database -->
 </table>
+<footer>
+    <p><em>Logged in as: User</em></p>
+</footer>
 </body>
 </html>

@@ -1,9 +1,6 @@
 package auth;
 
-import app.ManagerBean;
-import app.PersonBean;
-import app.UserBean;
-import app.UserDao;
+import app.*;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 
@@ -39,11 +36,14 @@ public class AuthAction extends ActionSupport {
             } else if (person instanceof ManagerBean) {
                 return "success-manager";
             }
-            else{
+            else if (person instanceof StaffBean) {
                 return "success-staff";
+            } else {
+                addActionError("Database error: user type not defined.");
+                return ERROR;
             }
         } else {
-            addActionError("Invalid username or password");
+            addActionError("Invalid username or password.");
             return ERROR;
         }
     }
