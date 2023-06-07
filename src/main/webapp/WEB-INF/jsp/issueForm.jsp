@@ -8,10 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Issue Form</title>
-    <link rel="stylesheet" href="../css/issueFormStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/issueFormStyle.css">
 </head>
 <body>
 
@@ -28,4 +29,4 @@
 </s:form>
 
 </body>
-</html></html>
+</html>
