@@ -26,6 +26,11 @@
     <a href="#">Log out</a>
 </div>
 
+<s:form action="searchAction">
+    <s:textfield name="searchQuery" placeholder="Search..." />
+    <s:submit value="Search" />
+</s:form>
+
 <h2>Issue List</h2>
 <table id="issueTable">
     <tr>

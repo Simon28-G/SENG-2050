@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: lgala
-  Date: 4/06/2023
-  Time: 12:53 am
+  User: nathanvilmen
+  Date: 07/06/2023
+  Time: 17:41
   To change this template use File | Settings | File Templates.
 --%>
 
@@ -21,7 +21,7 @@
 <h1>Welcome to the Incident Report System</h1>
 
 <div class="navbar">
-  <a href="issueForumStaff.jsp">Issues</a>
+  <a href="issueForumUser.jsp">Issues</a>
   <a href="#">Knowledge Base</a>
   <a href="#">Log out</a>
 </div>
@@ -40,7 +40,7 @@
     <th onclick="sortTable(3)">Category</th>
     <th onclick="sortTable(4)">Assigned Staff</th>
   </tr>
-  <s:iterator value="issueList"> <%-- 'issueList' WILL BE THE ARRAY THAT STORES THE ISSUES --%>
+  <s:iterator value="issueSearchList"> <%-- 'issueList' WILL BE THE ARRAY THAT STORES THE ISSUES --%>
     <tr>
       <td><s:property value="title"/></td>
       <td><s:property value="status"/></td>
@@ -52,7 +52,7 @@
   <!-- Add more rows with issue data from the database -->
 </table>
 <footer>
-  <p><em>Logged in as: Staff member</em></p>
+  <p><em>Logged in as: </em></p>
 </footer>
 </body>
 </html>

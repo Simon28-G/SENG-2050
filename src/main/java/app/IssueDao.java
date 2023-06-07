@@ -33,7 +33,11 @@ public class IssueDao {
                 if (resultSet.next()) {
                     return createIssueFromResultSet(resultSet);
                 }
+            }catch (SQLException e) {
+                e.printStackTrace();
             }
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
         return null;
     }
@@ -48,7 +52,10 @@ public class IssueDao {
                 issues.add(issue);
             }
             return issues;
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 
     public List<IssueBean> getIssuesByReporterID(int reporterID) throws SQLException {
@@ -62,8 +69,13 @@ public class IssueDao {
                     issues.add(issue);
                 }
                 return issues;
+            }catch (SQLException e) {
+                e.printStackTrace();
             }
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 
     public void createIssue(IssueBean issue) throws SQLException {
@@ -82,6 +94,8 @@ public class IssueDao {
             statement.setString(8, issue.getCategory().name());
             statement.setBoolean(9, issue.isKBArticle());
             statement.executeUpdate();
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -97,6 +111,8 @@ public class IssueDao {
             statement.setString(4, issue.getState().name());
             //not sure boolean
             statement.setBoolean(5, issue.isKBArticle());
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
 
     }

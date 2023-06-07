@@ -5,9 +5,18 @@
   Time: 12:53 am
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="org.apache.struts2.ServletActionContext" %>
+<%@ page import="app.PersonBean" %>
+<%@ page import="app.UserBean" %>
+<%@ page import="app.ManagerBean" %>
+<%@ page import="app.StaffBean" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%
+    PersonBean person = (PersonBean) session.getAttribute("user");
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,10 +30,20 @@
 <h1>Welcome to the Incident Report System</h1>
 
 <div class="navbar">
-    <a href="issueForumUser.jsp">Issues</a>
-    <a href="#">Knowledge Base</a>
-    <a href="#">Log out</a>
+    <s:a action="issueForumUser">Issues</s:a>
+    <s:a action="knowledgeBase">Knowledge Base</s:a>
+    <s:a action="logout">Log out</s:a>
 </div>
+
+
+<s:form action="searchAction">
+    <s:textfield name="searchQuery" placeholder="Search..." />
+    <s:submit value="Search" />
+</s:form>
+
+<s:form action="displayIssueForm">
+    <s:submit value="New Issue" />
+</s:form>
 
 <h2>Issue List</h2>
 <table id="issueTable">
@@ -47,7 +66,12 @@
     <!-- Add more rows with issue data from the database -->
 </table>
 <footer>
-    <p><em>Logged in as: User</em></p>
+    <p><em>Logged in as:
+    <%if (person instanceof UserBean){%>User
+    <%} else if (person instanceof ManagerBean){%>Manager
+    <%} else if (person instanceof StaffBean){%>Staff member
+    <%}%>
+    </em></p>
 </footer>
 </body>
 </html>

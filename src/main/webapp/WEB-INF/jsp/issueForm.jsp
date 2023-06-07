@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: lgala
+  User: nathanvilmen
   Date: 2/06/2023
   Time: 3:09 pm
   To change this template use File | Settings | File Templates.
@@ -20,11 +20,6 @@
     <a href="#">Log out</a>
 </div>
 <h1>New Issue</h1>
-
-<!--
- name="issueForm" method="POST"
- id="category"
--->
 
 <s:form action="submitIssue" enctype="multipart/form-data">
     <s:textfield id="title" name="issue.title" label="Issue Title" placeholder="Title" /><br/>

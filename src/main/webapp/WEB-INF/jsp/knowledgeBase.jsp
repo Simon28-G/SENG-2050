@@ -1,11 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
-  User: lgala
-  Date: 4/06/2023
-  Time: 12:53 am
+  User: nathanvilmen
+  Date: 07/06/2023
+  Time: 17:23
   To change this template use File | Settings | File Templates.
 --%>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
@@ -18,12 +17,13 @@
   <script src="../js/issueForumSort.js"></script>
 </head>
 <body>
-<h1>Welcome to the Incident Report System</h1>
+<h1>Knowledge Base</h1>
+<h3>Here you can find all the resolved issues that can help you into finding a solution to your problem.</h3>
 
 <div class="navbar">
-  <a href="issueForumStaff.jsp">Issues</a>
-  <a href="#">Knowledge Base</a>
-  <a href="#">Log out</a>
+  <s:a action="issueForumUser">Issues</s:a>
+  <s:a action="knowledgeBase">Knowledge Base</s:a>
+  <s:a action="logout">Log out</s:a>
 </div>
 
 <s:form action="searchAction">
@@ -52,7 +52,7 @@
   <!-- Add more rows with issue data from the database -->
 </table>
 <footer>
-  <p><em>Logged in as: Staff member</em></p>
+  <p><em>Logged in as: User</em></p>
 </footer>
 </body>
 </html>
