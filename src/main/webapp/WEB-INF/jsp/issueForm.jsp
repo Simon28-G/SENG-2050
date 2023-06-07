@@ -11,12 +11,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Issue Form</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/issueFormStyle.css">
 </head>
 <body>
 
-<s:a action="issueForumUser">Back</s:a>
+<s:form action="issueForumUser" style="margin-left: auto;">
+    <s:submit value="Back" class="newButton"/>
+</s:form>
 
 <h1>New Issue</h1>
 

@@ -47,7 +47,7 @@ Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
 
         <action name="searchAction" class="actions.SearchAction">
             <interceptor-ref name="defaultStack" />
-            <result name="success">/WEB-INF/jsp/issueForumSearch.jsp</result>
+            <result name="success">/WEB-INF/jsp/issueForumUser.jsp</result>
             <result name="error">/WEB-INF/jsp/issueForumUser.jsp</result>
         </action>
 
@@ -71,6 +71,11 @@ Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
             <interceptor-ref name="defaultStack" />
             <result name="success">/WEB-INF/jsp/login.jsp</result>
             <result name="error">/WEB-INF/jsp/login.jsp</result> <!-- To be changed -->
+        </action>
+
+        <action name="displayIssuePage" class="actions.DisplayIssuePage">
+            <interceptor-ref name="defaultStack" />
+            <result name="success">/WEB-INF/jsp/issuePage.jsp</result>
         </action>
 
     </package>

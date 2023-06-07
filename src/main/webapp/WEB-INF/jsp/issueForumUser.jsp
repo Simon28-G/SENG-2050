@@ -24,26 +24,25 @@
     <meta charset="UTF-8">
     <title>Incident Report System</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/issuesPagesStyle.css">
-    <script src="../js/issueForumSort.js"></script>
+    <script src="${pageContext.request.contextPath}/js/issueForumSort.js"></script>
 </head>
 <body>
 <h1>Welcome to the Incident Report System</h1>
 
 <div class="navbar">
-    <s:a action="issueForumUser">Issues</s:a>
+    <s:a class="active" action="issueForumUser">Issues</s:a>
     <s:a action="knowledgeBase">Knowledge Base</s:a>
     <s:a action="logout">Log out</s:a>
 </div>
 
-
-<div style="display: flex;">
-    <s:form action="searchAction" style="display: flex;">
-        <s:textfield name="searchQuery" placeholder="Search..." />
-        <s:submit value="Search" />
+<div class="search-container">
+    <s:form action="searchAction" class="search container">
+        <s:textfield name="searchQuery" placeholder="Search..." style="margin-right: 10px;" class="input"/>
+        <s:submit value="Search" class="button"/>
     </s:form>
 
     <s:form action="displayIssueForm" style="margin-left: auto;">
-        <s:submit value="New Issue" />
+        <s:submit value="New Issue" class="newButton"/>
     </s:form>
 </div>
 
@@ -58,6 +57,28 @@
         <th onclick="sortTable(4)">Assigned Staff</th>
     </tr>
 
+    <s:iterator value="issuesList" var="issue">
+        <tr>
+            <td>
+                <s:form action="displayIssuePage" style="margin-left: auto;">
+                    <s:hidden name="issueID" value="%{#issue.issueID}" />
+                    <s:submit value="%{#issue.title}" />
+                </s:form>
+            </td>
+            <td><s:property value="state"/></td>
+            <td><s:property value="dateReported"/></td>
+            <td><s:property value="category"/></td>
+            <td><s:property value="staffId"/>
+            <%
+                if (person instanceof ManagerBean){
+            %>
+            <s:form action="setResolverPerson" style="margin-left: auto;">
+                <s:hidden name="issueID" value="%{#issue.issueID}" />
+                <s:submit value="Assign a resolver" />
+            </s:form>
+            <%}%></td>
+        </tr>
+    </s:iterator>
         <s:iterator value="issuesList" var="issue">
             <tr>
                 <td><s:property value="title"/></td>
@@ -69,7 +90,7 @@
                     <s:hidden name="issueID" value="%{#issue.issueID}" />
                     <s:submit value="Assign a resolver" />
                 </s:form>
-              
+
             </tr>
         </s:iterator>
 </table>
